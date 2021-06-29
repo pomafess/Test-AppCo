@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import { useDispatch, shallowEqual, useSelector } from 'react-redux';
 
 import Pagination from '../../client/Pagination';
 import Navigation from '../../client/Navigation';
