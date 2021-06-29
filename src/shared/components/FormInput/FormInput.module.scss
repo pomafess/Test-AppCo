@@ -1,31 +1,33 @@
 @import 'src/shared/styles/_base';
 
 .input {
-  width: 280px;
+  box-sizing: border-box;
+  width: 320px;
   height: 42px;
-  background: #f6f7fb;
+  background: $secondary-text-color;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.625;
   border-color: transparent;
   box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.15);
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.04em;
   outline: none;
   margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
 
-  @include tablet {
-    width: 320px;
+  &::placeholder {
+    padding-left: 18px;
+    color: #b9b9b9;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.625;
   }
-}
-
-.label {
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: 0.04em;
-  color: $secondary-text-color;
-  text-transform: capitalize;
-}
-
-.formGroup {
-  @include flex(start, start);
-  flex-direction: column;
+  @include tablet {
+    width: 450px;
+    height: 54px;
+  }
+  @include desktop {
+    width: 578px;
+    height: 64px;
+  }
 }

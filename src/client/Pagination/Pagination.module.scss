@@ -1,0 +1,34 @@
+@import '../../shared/styles/base';
+@import '../../shared/styles/common';
+
+.pagination {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+}
+
+.listItems li {
+  justify-content: center;
+}
+
+.listItems li:not(:last-child):not(:first-child):not(:nth-child(6)) {
+  margin-right: 8px;
+}
+
+.page-item {
+  height: 48px;
+  width: 48px;
+  border-radius: 8px;
+}
+.page-item {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border-radius: 8px;
+  border: 2px solid #f1f1f1;
+  cursor: pointer;
+}
+.active {
+  background-color: #3a80ba;
+  border: none;
+}

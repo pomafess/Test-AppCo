@@ -1,2 +1,62 @@
 @import '../../shared/styles/base';
 @import '../../shared/styles/common';
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 24px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include desktop {
+    justify-content: space-between;
+  }
+  &Logo {
+    margin-bottom: 48px;
+  }
+  &Title {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 1.229;
+    color: $secondary-text-color;
+    margin-bottom: 24px;
+    .span {
+      font-weight: bold;
+    }
+    @include desktop {
+      width: 586px;
+      text-align: start;
+    }
+  }
+}
+
+.description {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.4;
+  color: $secondary-text-color;
+  margin-bottom: 32px;
+  @include desktop {
+    width: 580px;
+  }
+}
+.button {
+  display: block;
+  margin: 0 auto;
+  width: 154px;
+  height: 56px;
+  background: $secondary-text-color;
+  color: #3a80ba;
+  @include desktop {
+    display: inline-block;
+  }
+}
+.iphone {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
+}

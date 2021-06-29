@@ -8,7 +8,7 @@ const middleware = [
 
 export const store = configureStore({
    reducer: {
-      blocks: tableReducer,
+      users: tableReducer,
 },
    middleware,
    devTools: process.env.NODE_ENV === 'development',

@@ -1,0 +1,42 @@
+@import 'src/shared/styles/base';
+@import 'src/shared/styles/common';
+
+.formBox {
+  margin: 0 auto;
+  position: relative;
+  flex-wrap: nowrap;
+  width: 340px;
+  @include tablet {
+    width: 460px;
+  }
+  @include desktop {
+    width: 600px;
+  }
+}
+.emailButton {
+  position: absolute;
+  background: #3a80ba;
+  height: 33px;
+  width: 98px;
+  left: 219px;
+  top: 15px;
+  border-radius: 8px;
+  &:hover {
+    background: $secondary-text-color;
+    color: #3a80ba;
+    border: 1px solid #3a80ba;
+  }
+
+  @include tablet {
+    height: 47px;
+    width: 153px;
+    left: 294px;
+    top: 14px;
+  }
+  @include desktop {
+    height: 56px;
+    width: 176px;
+    left: 400px;
+    top: 15px;
+  }
+}

@@ -1,0 +1,26 @@
+@import 'src/shared/styles/base';
+@import 'src/shared/styles/common';
+
+.nav {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.navList {
+  display: flex;
+}
+
+.liItem:not(:last-child) {
+  margin-right: 8px;
+}
+.liItemLink {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #807b7b;
+}
+.liItemActive {
+  color: #3a80ba;
+  text-decoration: none;
+  vertical-align: bottom;
+}

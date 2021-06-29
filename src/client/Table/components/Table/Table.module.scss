@@ -1,4 +1,23 @@
 @import 'src/shared/styles/base';
+@import 'src/shared/styles/common';
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+}
+.th {
+  background: #3a80ba;
+  // color: $secondary-text-color;
+}
+
+.tableTitle {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.218;
+  margin-bottom: 16px;
+  color: $primary-text-color;
+}
 
 .item {
   border-radius: 6px 6px 0px 0px;

@@ -1,0 +1,66 @@
+@import '../../shared/styles/base';
+@import '../../shared/styles/common';
+
+.title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.218;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.span {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.218;
+}
+.text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.list {
+  max-width: 460px;
+  margin: 0 auto;
+  @include tablet {
+    @include flex();
+    margin-bottom: 128px;
+    max-width: 100%;
+  }
+}
+.item {
+  @include flex();
+  flex-direction: column;
+  text-align: center;
+  padding: 48px 32px;
+  box-shadow: 0px 4px 16px 0px #00000029;
+  border-radius: 32px;
+  background: #ffffff;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    &:not(:last-child) {
+      margin-bottom: 0px;
+      margin-right: 20px;
+    }
+  }
+}
+.img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.cardTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.437;
+  color: $p-text-color;
+}

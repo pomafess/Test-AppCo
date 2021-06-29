@@ -6,20 +6,19 @@ class TableService extends BaseHttpService {
     try {
       const data = await this.get('users',  {
         params: {
-          limit: 50
+          page: 1,
+          size: 1000
         }
       });
-      const statsData = await this.get('users-statistic',  {
-        params: {
-          limit: 50
-        }
-      });
-      const result = data.map(item => {
-        const { page_views, clicks } = statsData.find(({ user_id }) => user_id === item.id);
-        return {...item, page_views, clicks}
-      })
-      console.log(result);
-        return result;
+      console.log(data)
+      return data
+    } catch (error) {
+    }
+  };
+  async fetchStatistics(id) {
+    try {
+      const data = await this.get(`users-statistic/${id}`);
+       return data;
     } catch (error) {
     }
   }
