@@ -1,8 +1,10 @@
 import { React, useState, useEffect } from 'react';
 import {useDispatch, shallowEqual, useSelector } from 'react-redux';
+// import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { getBlocks } from "../../../../redux/table/operations";
-import {getTableList} from "../../../../redux/table/selectors"
+import {getTableList} from "../../../../redux/table/selectors";
+// import OneUserPage from '../../../../pages/OneUserPage'
 
 import s from './Table.module.scss'
 
@@ -12,15 +14,21 @@ const Table = () => {
         dispatch(getBlocks(1, 50))
         }, [dispatch]);
     
+    // const history = useHistory();
     const users = useSelector(getTableList, shallowEqual);
     const [user, setUser] = useState(null)
     const onRowSelect = row => (
     setUser(row)
     )
     console.log(user)
-    
-    
-    return (
+
+  //     if (user) {
+  //   return (
+  //     <Link  to={`/user/${id}`}><OneUserPage user={user}/></Link>
+  //   );
+  // }   
+
+    return ( 
       <div className={s.container}>
         <h2 className={s.tableTitle}>Users Statistics</h2>
         <table className="table table-striped">

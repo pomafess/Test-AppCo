@@ -18,10 +18,10 @@ export const getBlocks = (page, size) => async (dispatch) => {
   }
 }
 
-export const getStatistics = (id, from, to) => async dispatch => {
+export const getStatistics = (id) => async dispatch => {
   dispatch(actions.getStatisticRequest());
   try {
-    const data = await axios.get(`/stats?${id}&from=${from}&from=${to}`)
+    const data = await axios.get(`/stats?${id}`)
     dispatch(actions.getStatisticSuccess(data))
   }
   catch (error) {
