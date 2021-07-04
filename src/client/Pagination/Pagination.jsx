@@ -22,7 +22,7 @@ class Pagination extends Component{
           previousLabel={'<'}
           nextLabel={'>'}
           breakLabel={'...'}
-          breakClassName={'break-me'}
+             breakClassName={'break-me'}
           pageCount={20}
           marginPagesDisplayed={0}
           pageRangeDisplayed={5}

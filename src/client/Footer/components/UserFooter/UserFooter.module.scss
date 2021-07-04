@@ -1,0 +1,25 @@
+@import '../../../../shared/styles/base';
+@import '../../../../shared/styles/common';
+
+.bkg {
+  background-color: #1c3b55;
+}
+
+.flexbox {
+  @include flex();
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  align-items: center;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.208;
+}
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.437;
+  color: $secondary-text-color;
+}

@@ -13,7 +13,7 @@ const Routes = () => {
             <Switch>
                 <Route path="/" exact component={MainPage} />
                 <Route path="/users" exact component={UsersPage} />
-                <Route path="/user:id" exact component={OneUserPage} />
+                <Route path="/users/:id" exact component={OneUserPage} />
                 <Route component={NotFoundPage} />
             </Switch>
         </Suspense>

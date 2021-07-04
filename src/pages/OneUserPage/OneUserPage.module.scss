@@ -1,0 +1,18 @@
+@import '../../shared/styles/base';
+@import '../../shared/styles/common';
+
+.name {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.218;
+  color: $primary-text-color;
+  margin-bottom: 24px;
+}
+
+.stats {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.208;
+  color: $primary-text-color;
+  margin-bottom: 24px;
+}

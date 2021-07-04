@@ -1,8 +1,6 @@
 import axios from "axios";
 import actions from './actions';
 
-
-
 axios.defaults.baseURL = "https://lit-fjord-57578.herokuapp.com";
 
 export const getBlocks = (page, size) => async (dispatch) => {
@@ -21,7 +19,7 @@ export const getBlocks = (page, size) => async (dispatch) => {
 export const getStatistics = (id) => async dispatch => {
   dispatch(actions.getStatisticRequest());
   try {
-    const data = await axios.get(`/stats?${id}`)
+    const {data} = await axios.get(`/stats?id=${id}`)
     dispatch(actions.getStatisticSuccess(data))
   }
   catch (error) {

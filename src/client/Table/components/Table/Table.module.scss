@@ -5,10 +5,21 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+.headRow {
+  background: #3a80ba;
+  color: $secondary-text-color;
 }
 .th {
-  background: #3a80ba;
-  // color: $secondary-text-color;
+  color: $secondary-text-color;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  &:not(:last-child) {
+    border-right: 1px solid #ffffff;
+  }
 }
 
 .tableTitle {
@@ -19,40 +30,51 @@ table {
   color: $primary-text-color;
 }
 
-.item {
-  border-radius: 6px 6px 0px 0px;
-  filter: drop-shadow(4px 6px 15px rgba(0, 0, 0, 0.1));
-}
+// .item {
+//   border-radius: 6px 6px 0px 0px;
+//   filter: drop-shadow(4px 6px 15px rgba(0, 0, 0, 0.1));
+// }
 
-.title {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 1.25;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $primary-text-color;
-}
+// .title {
+//   font-weight: 700;
+//   font-size: 12px;
+//   line-height: 1.25;
+//   letter-spacing: 0.04em;
+//   text-transform: uppercase;
+//   color: $primary-text-color;
+// }
 
-.description {
-  @include flex(space-between, center);
-  background-color: $primary-bg-color;
-  border-radius: 0px 0px 6px 6px;
-  padding: 14px 20px 17px 20px;
-}
+// .description {
+//   @include flex(space-between, center);
+//   background-color: $primary-bg-color;
+//   border-radius: 0px 0px 6px 6px;
+//   padding: 14px 20px 17px 20px;
+// }
 
-.score {
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 1.2;
+// .score {
+//   font-weight: 500;
+//   font-size: 10px;
+//   line-height: 1.2;
+//   text-align: center;
+//   letter-spacing: 0.04em;
+//   text-transform: uppercase;
+//   color: #ffffff;
+
+//   @include flex(center, center);
+//   min-width: 78px;
+//   height: 18px;
+//   background-color: #5679d7;
+//   border-radius: 3px;
+//   padding: 3px 10px;
+// }
+
+.tdLink {
+  display: block;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
   text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #ffffff;
-
-  @include flex(center, center);
-  min-width: 78px;
-  height: 18px;
-  background-color: #5679d7;
-  border-radius: 3px;
-  padding: 3px 10px;
+  text-decoration: none;
+  color: $primary-text-color;
 }
