@@ -21,7 +21,6 @@ import s from './OneUserPage.module.scss'
 
 const OneUserPage = () => {
   const { id } = useParams();
-  console.log(id);
 
   const dispatch = useDispatch()
   useEffect(() => {
@@ -33,16 +32,12 @@ const OneUserPage = () => {
   }, [dispatch]);
 
   const users = useSelector(getTableList, shallowEqual);
-  console.log(users);
 
   const statics = useSelector(state => state.users.statistic, shallowEqual);
-  console.log(statics)
 
   let newArray = users.filter(user => id.includes(user.id))
-  console.log(newArray);
 
   newArray = newArray.splice(newArray.length - 1,1);
-  console.log(newArray);
   
   const title = newArray.map(user => <span key={uuidv4} >{user.first_name}<span>{user.last_name}</span></span> )
   return (
